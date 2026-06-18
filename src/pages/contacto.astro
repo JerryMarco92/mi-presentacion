@@ -1,0 +1,63 @@
+---
+const idioma = "es";
+
+const campos = {
+    es: {
+        nombre:"Nombre completo",
+        correo: "Correo electronico"},
+    en: {
+        nombre:"Full name",
+        correo: "E-mail"}
+};
+---
+
+<h2>Enviame un mensaje</h2>
+<form class="formulario">
+  <label for="nombre">{ idioma === "es" ? campos.es.nombre : campos.en.nombre }</label>
+  <input type="text" id="nombre" name="nombre" required>
+
+  <label for="correo">{ idioma === "es" ? campos.es.correo : campos.en.correo }</label>
+  <input type="email" id="correo" name="correo" required>
+
+  <label for="mensaje">Mensaje</label>
+  <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+
+
+
+<style>
+h2{
+    margin: 3%;
+    text-align: center;
+}
+
+.formulario {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+  padding: 10px;
+  border: none;
+  background-color: #0077ff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #005fcc;
+}
+</style>

@@ -1,6 +1,7 @@
 ---
 let novedad = true;
 let mensaje = "Solo ofertas en remoto";
+
 ---
 
 <html lang="en">
@@ -15,9 +16,8 @@ let mensaje = "Solo ofertas en remoto";
 	<body>
 		<h1>Jerome Camarena Sebastia</h1>
 		<img src="../../public/perfil.jpg" alt="" />
-		<br>
-		{novedad ? <span>{mensaje}</span> : ''}
-		
+		<br />
+		{novedad ? <span>{mensaje}</span> : ""}
 
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eius in
@@ -35,11 +35,13 @@ let mensaje = "Solo ofertas en remoto";
 			</ul>
 		</section>
 		<section id="contacto">
-			<p>@: <a href="#">jercamseb@gmail.com</a></p>
-			<p>
-				GitHub: <a href="https://github.com/JerryMarco92"
-					>JerryMarco92</a>
-			</p>
+			<nav>
+				<ul>
+					<li><a href="#">jercamseb@gmail.com</a></li>
+					<li><p>GitHub: <a href="https://github.com/JerryMarco92">JerryMarco92</a></p></li>
+					<li><a href="/contacto">Enviar mensaje</a></li>
+				</ul>
+			</nav>
 		</section>
 
 		<article>
@@ -55,19 +57,16 @@ let mensaje = "Solo ofertas en remoto";
 	img {
 		max-width: 850px;
 		width: 100%;
-		
 	}
 	* {
-		
 		text-align: center;
 		text-decoration: none;
 		list-style: none;
-		
 	}
-	span{
+	span {
 		background-color: lightcoral;
 	}
-	ul{
+	#conocimientos ul {
 		margin: auto;
 		display: flex;
 		justify-content: space-evenly;
@@ -75,7 +74,5 @@ let mensaje = "Solo ofertas en remoto";
 		text-align: center;
 		width: 250px;
 		background-color: lightgray;
-
 	}
-
 </style>
